@@ -1,3 +1,8 @@
+/*
+ * Author: Curtice Gough, cgough2019@my.fit.edu
+ * Course: CSE 1002, Section 1, Fall 2021
+ * Project: Snake Game
+*/
 import java.awt.event.KeyEvent;
 import java.awt.Font;
 import java.util.ArrayList;
