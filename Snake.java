@@ -2,7 +2,7 @@
  * Author: Curtice Gough, cgough2019@my.fit.edu
  * Course: CSE 1002, Section 1, Fall 2021
  * Project: Snake Game
- */
+*/
 import java.awt.event.KeyEvent;
 import java.awt.Font;
 import java.util.ArrayList;
@@ -85,6 +85,7 @@ public class Snake {
       }
 
       public void grow (final int num) {
+         StdAudio.playInBackground("pop.wav");
          for (int i = 0; i < num; i++) {
             snake.add(new Segment(get(size() - 1).x,
                                   get(size() - 1).y));
@@ -202,6 +203,7 @@ public class Snake {
 
    public static void main (final String[] args) throws InterruptedException {
       final ExecutorService exec = Executors.newCachedThreadPool();
+      StdAudio.loopInBackground("music.wav");
 
       while (true) {
          // Set all variables to initial values
@@ -274,6 +276,7 @@ public class Snake {
          }
 
          // Game over
+         StdAudio.playInBackground("scream.wav");
          StdDraw.disableDoubleBuffering();
          StdDraw.setPenColor(StdDraw.GRAY);
          StdDraw.filledRectangle(0.5, 0.5, 0.225, 0.15);
